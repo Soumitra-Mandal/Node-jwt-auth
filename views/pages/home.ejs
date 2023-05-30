@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs'); %>
+        <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs'); %>
+    </header>
+    <% if (jwt) { %>
+        <h1>Welcome to home.</h1>
+        <p>Hey <%= user%>, you are logged in.</p>
+        <% } else { %>
+            <h1>Please Sign-Up or Login to continue.</h1>
+            <% } %>
+
+</body>
+
+</html>

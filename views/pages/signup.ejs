@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs'); %>
+        <title>Sign-Up</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs'); %>
+    </header>
+    <% if (error) { %>
+        <p style="color:red;">
+            <%= error %>
+        </p>
+        <% } %>
+            <h1 style="text-align: center;">Create Account</h1>
+            <form action="/signup" method="post" style="width:500px; position: absolute; left: 520px;">
+                <div class="form-outline mb-4">
+                    <input type="email" id="email" name="email" class="form-control" style="border-color: grey;" />
+                    <label class="form-label" for="email">Email address</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="password" id="password" name="password" class="form-control"
+                        style="border-color: grey;" />
+                    <label class="form-label" for="password">Password</label>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            </form>
+</body>
+
+</html>
